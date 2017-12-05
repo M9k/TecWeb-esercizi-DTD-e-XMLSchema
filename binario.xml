@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binario xmlns="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="binario.xsd">
+	<uno>1</uno>
+	<zero>0</zero>
+	<uno>1</uno>
+	<uno>1</uno>
+	<uno>1</uno>
+	<zero>0</zero>
+</binario>

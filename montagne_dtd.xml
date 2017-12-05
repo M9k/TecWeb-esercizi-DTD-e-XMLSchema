@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE montagne [
+<!ELEMENT montagne (catenaMontuosa)+>
+<!ELEMENT catenaMontuosa (monte)*>
+<!ELEMENT monte (nome, regione?, altezza)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT regione (#PCDATA)>
+<!ELEMENT altezza (#PCDATA)>
+<!ATTLIST altezza unitaMisuta CDATA "">
+]>
+<montagne>
+	<catenaMontuosa>
+		<monte>
+			<nome>Monte Bianco</nome>
+			<regione>Valle d’Aosta</regione>
+			<altezza unitaMisura="metri">4810</altezza>
+		</monte>
+		<monte>
+			<nome>Monte Rosa</nome>
+			<altezza unitaMisura="piedi">4234</altezza>
+		</monte>
+	</catenaMontuosa>
+	<catenaMontuosa>
+		<monte>
+			<nome>Monte Blu</nome>
+			<regione>Valle d’Aosta</regione>
+			<altezza unitaMisura="metri">4810</altezza>
+		</monte>
+		<monte>
+			<nome>Monte Verde</nome>
+			<altezza unitaMisura="piedi">4234</altezza>
+		</monte>
+	</catenaMontuosa>
+</montagne>

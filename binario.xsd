@@ -1,0 +1,12 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+
+<xsd:element name="binario">
+  <xsd:complexType>
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="zero" type="xsd:unsignedByte" fixed="0"/>
+      <xsd:element name="uno" type="xsd:unsignedByte" fixed="1"/>
+    </xsd:choice>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

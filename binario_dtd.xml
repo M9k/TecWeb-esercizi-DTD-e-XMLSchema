@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE binario [
+<!ELEMENT binario (zero|uno)*>
+<!ELEMENT zero (#PCDATA)>
+<!ELEMENT uno (#PCDATA)>
+]>
+<binario>
+	<uno>1</uno>
+	<zero>0</zero>
+	<uno>1</uno>
+	<uno>1</uno>
+	<uno>1</uno>
+	<zero>0</zero>
+</binario>

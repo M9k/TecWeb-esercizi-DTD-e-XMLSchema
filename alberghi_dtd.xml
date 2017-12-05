@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE alberghi [
+<!ELEMENT alberghi (albergo)+>
+<!ELEMENT albergo (nome, citta, tel, cell?, prezzo+)>
+<!ATTLIST albergo categoria CDATA #REQUIRED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT citta (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT cell (#PCDATA)>
+<!ELEMENT prezzo (#PCDATA)>
+<!ATTLIST prezzo stanza CDATA #REQUIRED>
+]>
+<alberghi>
+	<albergo categoria="****">
+		<nome>Hotel Astoria</nome>
+		<citta>Roma</citta>
+		<tel>06237813</tel>
+		<cell>353134125</cell>
+		<prezzo stanza="singola">120</prezzo>
+		<prezzo stanza="doppia">200</prezzo>
+	</albergo>
+	<albergo categoria="*">
+		<nome>Pensione Scatafascio</nome>
+		<citta>Roma</citta>
+		<tel>068872382</tel>
+		<prezzo stanza="doppia">50</prezzo>
+		<prezzo stanza="singola">40</prezzo>
+	</albergo>
+</alberghi>

@@ -1,0 +1,44 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+
+	<xsd:element name="alberghi">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="albergo" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="albergo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nome" type="xsd:string"/>
+				<xsd:element name="citta" type="xsd:string"/>
+				<xsd:element name="tel" type="xsd:string"/>
+				<xsd:element name="cell" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="prezzo" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:integer">
+								<xsd:attribute name="stanza" type="stanza"/>
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="categoria" type="valutazione"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name="valutazione">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="\*?\*?\*?\*?\*?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="stanza">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="(singola|doppia)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

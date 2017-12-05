@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<montagne xmlns="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="montagne.xsd">
+	<catenaMontuosa nome="nome_catena">
+		<monte>
+			<nome>Monte Bianco</nome>
+			<regione>Valle d’Aosta</regione>
+			<altezza unitaMisura="metri">4810</altezza>
+		</monte>
+		<monte>
+			<nome>Monte Rosa</nome>
+			<altezza unitaMisura="piedi">4234</altezza>
+		</monte>
+	</catenaMontuosa>
+	<catenaMontuosa>
+		<monte>
+			<nome>Monte Blu</nome>
+			<regione>Valle d’Aosta</regione>
+			<altezza unitaMisura="metri">4810</altezza>
+		</monte>
+		<monte>
+			<nome>Monte Verde</nome>
+			<altezza unitaMisura="piedi">4234</altezza>
+		</monte>
+	</catenaMontuosa>
+</montagne>

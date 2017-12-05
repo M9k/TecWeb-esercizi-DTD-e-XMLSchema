@@ -1,0 +1,38 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+
+	<xsd:element name="montagne">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="catenaMontuosa" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="catenaMontuosa">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="monte" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="nome" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="monte">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nome" type="xsd:string"/>
+				<xsd:element name="regione" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="altezza" minOccurs="0">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:integer">
+								<xsd:attribute name="unitaMisura" type="xsd:string"/>
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

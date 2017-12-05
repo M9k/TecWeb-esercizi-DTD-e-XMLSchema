@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE episodi [
+	<!ELEMENT episodi (episodio+) >
+	<!ELEMENT episodio (titolo, direttore, scrittore, prima-trasmissione, visualizzazioni) >
+	<!ATTLIST episodio numero CDATA #REQUIRED >
+	<!ELEMENT titolo (#PCDATA) >
+	<!ELEMENT direttore (#PCDATA) >
+	<!ELEMENT scrittore (#PCDATA) >
+	<!ELEMENT prima-trasmissione (#PCDATA) >
+	<!ELEMENT visualizzazioni (#PCDATA) >
+]>
+
+<episodi>
+	<episodio numero="61">
+		<titolo>Dragonstone</titolo>
+		<direttore>Jeremy Podeswa</direttore>
+		<scrittore>David Benioff &amp; D. B. Weiss</scrittore>
+		<prima-trasmissione>July 16, 2017</prima-trasmissione>
+		<visualizzazioni>1011</visualizzazioni>
+	</episodio>
+	<episodio numero="62">
+		<titolo>Stormborn</titolo>
+		<direttore>Mark Mylod</direttore>
+		<scrittore>Bryan Cogman</scrittore>
+		<prima-trasmissione>July 23, 2017</prima-trasmissione>
+		<visualizzazioni></visualizzazioni>
+	</episodio>
+</episodi>

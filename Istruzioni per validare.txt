@@ -1,0 +1,2 @@
+xmllint --valid file_dtd.xml
+xmllint --schema file.xsd file.xml

@@ -1,0 +1,51 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+	<xsd:element name="trasporti">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="trasporto" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="trasporto">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="seriale" type="xsd:long"/>
+				<xsd:element ref="acquirente"/>
+				<xsd:element ref="libro" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="acquirente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nome" type="xsd:string"/>
+				<xsd:element name="cognome" type="xsd:string"/>
+				<xsd:element name="indirizzo" type="xsd:string"/>
+				<xsd:element name="citta" type="xsd:string"/>
+				<xsd:element name="cap" type="xsd:unsignedInt"/>
+				<xsd:element name="nazione" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="libro">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ISBN13" type="ISBN13"/>
+				<xsd:element name="titolo" type="xsd:string"/>
+				<xsd:element name="note" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="quantita" type="xsd:unsignedInt"/>
+				<xsd:element name="prezzo" type="xsd:decimal"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name ="ISBN13">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[0-9]{13}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

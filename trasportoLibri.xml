@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trasporti xmlns="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="trasportoLibri.xsd">
+	<trasporto>
+		<seriale>829375693285573</seriale>
+		<acquirente>
+			<nome>Pinco</nome>
+			<cognome>Pallino</cognome>
+			<indirizzo>Via Rossi 4</indirizzo>
+			<citta>Venezia</citta>
+			<cap>53012</cap>
+			<nazione>Italy</nazione>
+		</acquirente>
+		<libro>
+			<ISBN13>1234567890123</ISBN13>
+			<titolo>Miglior libro di sempre</titolo>
+			<note>Con pacco regalo</note>
+			<quantita>1</quantita>
+			<prezzo>12.53</prezzo>
+		</libro>
+	</trasporto>
+	<trasporto>
+		<seriale>829324342285573</seriale>
+		<acquirente>
+			<nome>Tizio</nome>
+			<cognome>Caio</cognome>
+			<indirizzo>Via Roma 123</indirizzo>
+			<citta>Roma</citta>
+			<cap>62034</cap>
+			<nazione>Italy</nazione>
+		</acquirente>
+		<libro>
+			<ISBN13>1234567890123</ISBN13>
+			<titolo>Miglior libro di sempre</titolo>
+			<quantita>10</quantita>
+			<prezzo>109.99</prezzo>
+		</libro>
+		<libro>
+			<ISBN13>1234567890123</ISBN13>
+			<titolo>Libro a caso</titolo>
+			<quantita>1</quantita>
+			<prezzo>19.99</prezzo>
+		</libro>
+	</trasporto>
+</trasporti>

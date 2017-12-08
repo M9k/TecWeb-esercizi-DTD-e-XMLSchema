@@ -1,2 +1,2 @@
-xmllint --valid file_dtd.xml
-xmllint --schema file.xsd file.xml
+xmllint --noout --valid file_dtd.xml
+xmllint --noout --schema file.xsd file.xml

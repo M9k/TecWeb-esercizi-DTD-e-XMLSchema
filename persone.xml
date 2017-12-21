@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persone xmlns="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="persone.xsd">
+	<persona>
+		<nome>Mirco</nome>
+		<sesso>M</sesso>
+	</persona>
+	<persona>
+		<nome>Marco</nome>
+		<sesso>M</sesso>
+	</persona>
+	<personaConCodiceFiscale>
+		<nome>Alessandro</nome>
+		<sesso>M</sesso>
+		<codFiscale>ASH43fhy83d64g7</codFiscale>
+	</personaConCodiceFiscale>
+</persone>

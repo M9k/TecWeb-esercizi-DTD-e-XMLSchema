@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE computers [
+<!ELEMENT computers (computer)+>
+<!ELEMENT computer (model, cpu, gpu*, ram, (ssd|hdd)*)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT cpu (#PCDATA)>
+<!ATTLIST cpu brand CDATA #REQUIRED>
+<!ELEMENT gpu (#PCDATA)>
+<!ATTLIST gpu brand CDATA #REQUIRED>
+<!ELEMENT ram (#PCDATA)>
+<!ELEMENT ssd (#PCDATA)>
+<!ATTLIST ssd brand CDATA #REQUIRED>
+<!ELEMENT hdd (#PCDATA)>
+<!ATTLIST hdd brand CDATA #REQUIRED>
+]>
+
+<computers>
+	<computer>
+		<model>ASUS K501</model>
+		<cpu brand="Intel">6500U</cpu>
+		<gpu brand="Intel">HD520</gpu>
+		<gpu brand="Nvidia">GTX 950M</gpu>
+		<ram>12</ram>
+		<hdd brand="HGST">1024</hdd>
+	</computer>
+	<computer>
+		<model>Packard Bell XYZ</model>
+		<cpu brand="Intel">7500U</cpu>
+		<gpu brand="Intel">HD540</gpu>
+		<ram>16</ram>
+		<ssd brand="Samsung">256</ssd>
+		<hdd brand="HGST">1024</hdd>
+		<hdd brand="WD">1024</hdd>
+		<hdd brand="Saegate">2048</hdd>
+	</computer>
+</computers>

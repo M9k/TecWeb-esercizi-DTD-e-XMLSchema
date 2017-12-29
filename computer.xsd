@@ -1,0 +1,76 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+
+	<xsd:element name="computers">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="computer" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="computer">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="model" type="xsd:string"/>
+				<xsd:element name="cpu" type="cpuT"/>
+				<xsd:element name="gpu" type="gpuT" maxOccurs="unbounded"/>
+				<xsd:element name="ram" type="xsd:positiveInteger"/>
+				<xsd:choice minOccurs="0" maxOccurs="unbounded">
+					<xsd:element name="ssd" type="ssdT"/>
+					<xsd:element name="hdd" type="hddT"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="cpuT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="brand" type="brandCpuT"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="gpuT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="brand" type="brandGpuT"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="hddT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="brand" type="brandDiskT"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ssdT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="brand" type="brandDiskT"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="brandCpuT">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="(Amd|Intel)"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+
+	<xsd:simpleType name="brandGpuT">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="(Amd|Ati|VooDoo|Nvidia|3dfx|Intel)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="brandDiskT">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="(HGST|WD|Saegate|Samsung)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

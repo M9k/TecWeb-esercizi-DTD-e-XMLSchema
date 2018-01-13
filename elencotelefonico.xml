@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<elenco xmlns="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="elencotelefonico.xsd">
+	<contatto id="123">
+		<nome>Mirco</nome>
+		<cognome>Carlotto</cognome>
+		<numero>12341234123</numero>
+		<indirizzo>Via X, città Y, provincia Z</indirizzo>
+		<relazione>Amico</relazione>
+	</contatto>
+	<contatto id="124">
+		<nome>Marco</nome>
+		<cognome>Carlotti</cognome>
+		<numero>23423344234</numero>
+		<relazione>Collega</relazione>
+	</contatto>
+	<contatto id="345">
+		<nome>Riccardo</nome>
+		<numero>534534534534</numero>
+	</contatto>
+	<contatto id="34">
+		<nome>Pippo</nome>
+		<numero>53542335345</numero>
+	</contatto>
+</elenco>
+
+
+

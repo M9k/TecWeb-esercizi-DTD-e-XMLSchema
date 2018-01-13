@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE elenco [
+<!ELEMENT elenco (contatto*)>
+<!ELEMENT contatto (nome, cognome?, numero, indirizzo?, relazione?)>
+<!ATTLIST contatto id CDATA #REQUIRED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT indirizzo (#PCDATA)>
+<!ELEMENT relazione (#PCDATA)>
+]>
+
+<elenco>
+	<contatto id="123">
+		<nome>Mirco</nome>
+		<cognome>Carlotto</cognome>
+		<numero>12341234123</numero>
+		<indirizzo>Via X, città Y, provincia Z</indirizzo>
+		<relazione>Amico</relazione>
+	</contatto>
+	<contatto id="124">
+		<nome>Marco</nome>
+		<cognome>Carlotti</cognome>
+		<numero>234234234</numero>
+		<relazione>Collega</relazione>
+	</contatto>
+	<contatto id="345">
+		<nome>Riccardo</nome>
+		<numero>534534534534</numero>
+	</contatto>
+	<contatto id="34">
+		<nome>Pippo</nome>
+		<numero>535435345</numero>
+	</contatto>
+</elenco>
+
+
+

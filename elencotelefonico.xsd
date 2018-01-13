@@ -1,0 +1,35 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+
+	<xsd:element name="elenco">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="contatto" type="Tcontatto" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="Tcontatto">
+		<xsd:sequence>
+			<xsd:element name="nome" type="xsd:string"/>
+			<xsd:element name="cognome" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="numero" type="Tnumber"/>
+			<xsd:element name="indirizzo" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="relazione" type="Trelaz" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:integer"/>
+	</xsd:complexType>
+
+	<xsd:simpleType name="Tnumber">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="\+?[0-9]{10}[0-9]*[0-9]*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="Trelaz">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="(Amico|Amica|Collega|Familiare|Parente|Marito|Moglie|Figlio|Figlia)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cartellaPosta utente="Quo"
+	xmlns="http://mail.it"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+	xs:schemaLocation="CartellaPosta.xsd" >
+	<cartella nome="Arrivata">
+		<messaggio>
+			<mittente>Paperino</mittente>
+			<destinatari>Qui, Quo, Qua</destinatari>
+			<ricevuto>2016-06-17T12:30:00</ricevuto>
+			<oggetto>Pranzo</oggetto>
+			<testo>Vi aspetto per pranzo, dove siete?</testo>
+		</messaggio>
+		<messaggio>
+			<mittente>Qua</mittente>
+			<to>Qui, Quo</to>
+			<ricevuto>2016-06-17T12:45:00</ricevuto>
+			<oggetto>Re: Pranzo</oggetto>
+			<testo>Ecco la foto dello zio arrabiato <immagine src="paperino.jpg" />
+			</testo>
+		</messaggio>
+		<messaggio>
+			<from>Qui</from>
+			<destinatari>Quo, Qua</destinatari>
+			<ricevuto>2016-06-17T12:40:00</ricevuto>
+			<oggetto>Fw: Pranzo</oggetto>
+			<testo>Siamo in ritardo per il pranzo! Lo zio ci gridera'!</testo>
+		</messaggio>
+	</cartella>
+	<cartella nome="Bozze" />
+</cartellaPosta>

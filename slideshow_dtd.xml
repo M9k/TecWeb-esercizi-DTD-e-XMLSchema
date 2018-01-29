@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE slideshow [
+<!ELEMENT slideshow (slide)*>
+<!ATTLIST slideshow
+	title CDATA #REQUIRED
+	author CDATA #REQUIRED
+	corso CDATA #REQUIRED
+	numLezione CDATA #REQUIRED>
+<!ELEMENT slide (title, img?, animation?, ul?)>
+<!ATTLIST slide
+	type CDATA #REQUIRED
+	author CDATA ""
+	corso CDATA ""
+	numLezione CDATA ""
+	transOut CDATA "">
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT img EMPTY>
+<!ATTLIST img
+	id CDATA #REQUIRED
+	src CDATA #REQUIRED>
+<!ELEMENT animation EMPTY>
+<!ATTLIST animation
+	target CDATA #REQUIRED
+	dur CDATA #REQUIRED
+	type CDATA #REQUIRED>
+<!ELEMENT ul (li|ul)*>
+<!ELEMENT li (#PCDATA|em|symbol|span)*>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT symbol (#PCDATA)>
+<!ATTLIST symbol type CDATA #REQUIRED>
+<!ELEMENT span (#PCDATA)>
+<!ATTLIST span color CDATA "">
+]>
+<slideshow title="Introduzione" author="Ombretta Gaggi"	corso="Tecnologie Web" numLezione="1">
+	<slide type="title" transOut="fade">
+		<title>Introduzione alle Tecnologie Web</title>
+	</slide>
+	<slide type="listItem" transOut="clockwise">
+		<title>Sommario</title>
+		<ul>
+			<li>Il concetto di ipertesto, il World Wide Web ed Internet</li>
+			<li> Il World Wide Web Consortium (<span color="blue"> W3C</span>)</li>
+		</ul>
+	</slide>
+	<slide type="image">
+		<title>Diffusione di Internet</title>
+		<img id="image" src="diffusione.png" />
+		<animation target="image" dur="5s" type="rotation" />
+	</slide>
+	<slide type="listItem" transOut="fade">
+		<title>Internet</title>
+		<ul>
+			<li>INTERconnected NETworks: reti (di reti) interconnesse</li>
+			<li>E' un insieme di reti eterogenee e connesse in maniera lasca </li>
+			<li>Garantisce, attraverso il protocollo TCP/IP, una comunicazione affidabile ma
+				non efficiente <symbol type="arrow" /> <em>best effort</em></li>
+			<li>ISP (Internet Service Provider): chi fornisce il servizio di connessione</li>
+			<ul><li>Sono a loro volta connessi a fornitori di servizi...</li></ul>
+		</ul>
+	</slide>
+</slideshow>

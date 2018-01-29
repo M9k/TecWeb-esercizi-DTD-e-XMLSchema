@@ -1,0 +1,52 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mail.it" xmlns="http://mail.it" elementFormDefault="qualified">
+
+	<xsd:element name="cartellaPosta">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="cartella" type="Tcartella" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="utente" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="Tcartella">
+		<xsd:sequence>
+			<xsd:element name="messaggio" type="Tmessaggio" maxOccurs="unbounded" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="nome" type="Tnomecartella"/>
+	</xsd:complexType>
+
+	<xsd:simpleType name="Tnomecartella">
+		<xsd:restriction base ="xsd:token">
+			<xsd:pattern value="(Arrivata|Bozze)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="Tmessaggio">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="from" type="xsd:string"/>
+				<xsd:element name="mittente" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:choice>
+				<xsd:element name="destinatari" type="xsd:string"/>
+				<xsd:element name="to" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="ricevuto" type="xsd:string"/>
+			<xsd:element name="oggetto" type="xsd:string"/>
+			<xsd:element name="testo" type="Ttesto"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Ttesto" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="immagine" type="Timmagine" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="Timmagine">
+		<xsd:attribute name="src" type="xsd:string"/>
+	</xsd:complexType>
+
+</xsd:schema>

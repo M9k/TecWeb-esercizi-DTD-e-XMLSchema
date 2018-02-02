@@ -1,4 +1,4 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.alberghi.it" xmlns="https://www.alberghi.it" elementFormDefault="qualified">
 
 	<xsd:element name="alberghi">
 		<xsd:complexType>

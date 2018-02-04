@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.film.com" targetNamespace="http://www.film.com" elementFormDefault="qualified">
+	<xsd:element name="film">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="elementofilm" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="anno" type="xsd:positiveInteger"/>
+							<xsd:element name="regista" type="xsd:string"/>
+							<xsd:element name="attori">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="attore" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:simpleContent>
+													<xsd:extension base="xsd:string">
+														<xsd:attribute name="personaggio" type="xsd:string" />
+														<xsd:attribute name="ruolo" type="xsd:string" />
+													</xsd:extension>
+												</xsd:simpleContent>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="immagine" minOccurs="0" >
+								<xsd:complexType>
+									<xsd:attribute name="src" type="xsd:string" use="required"/>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>	
+						<xsd:attribute name="titolo" type="xsd:string" use="required"/>
+					</xsd:complexType>
+				</xsd:element>	
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE film SYSTEM "film.dtd">
+
+<film>
+	<elementofilm titolo="Film123">
+		<anno>1234</anno>
+		<regista>Pinco Pallino</regista>
+		<attori>
+			<attore personaggio="Tizio" ruolo="Protagonista">
+				Tizio
+			</attore>
+			<attore personaggio="Caio" ruolo="Secondario">
+				Cesare
+			</attore>
+		</attori>
+		<immagine src="img123.jpg"/>
+	</elementofilm>
+	<elementofilm titolo="FilmAsd">
+		<anno>2015</anno>
+		<regista>Pinco Pallino</regista>
+		<attori>
+			<attore personaggio="Tizio">
+				Tizio
+			</attore>
+			<attore>
+				Cesare
+			</attore>
+		</attori>
+	</elementofilm>
+</film>

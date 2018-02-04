@@ -1,0 +1,14 @@
+<!ELEMENT film (elementofilm)* >
+<!ELEMENT elementofilm (anno?, regista?, attori, immagine?) >
+<!ATTLIST elementofilm
+	titolo CDATA #REQUIRED >
+<!ELEMENT anno (#PCDATA) >
+<!ELEMENT regista (#PCDATA) >
+<!ELEMENT attori (attore)* >
+<!ELEMENT attore (#PCDATA)>
+<!ATTLIST attore
+	personaggio CDATA #IMPLIED
+	ruolo CDATA "Sconosciuto" >
+<!ELEMENT immagine EMPTY >
+<!ATTLIST immagine
+	src CDATA #REQUIRED >
